@@ -1,0 +1,6 @@
+---
+
+- hosts: all
+  roles:
+  - example-1
+  - example-2
