@@ -1,6 +1,14 @@
 ---
 
+# This should output first baz, then bar, but outputs baz twice
 - hosts: all
   roles:
   - example-1
   - example-2
+
+# The same roles included directly work as expected
+- hosts: all
+  roles:
+  - role: dependency
+    foo: baz
+  - role: dependency
